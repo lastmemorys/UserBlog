@@ -1,0 +1,11 @@
+<%= form_for @blog do |f| %>
+    <div>
+      <%= f.label "标题" %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label "文章内容" %>
+      <%= f.text_area :content %>
+    </div>
+    <%= f.submit "发表文章" %>
+<% end %>

@@ -1,0 +1,19 @@
+<div>
+  <ul>
+    <% @blogs.each do |blog| %>
+        <li>
+          <div>
+            <div class="blog-title"><%= blog.title %></div>
+            <div class="blog-content"><%= blog.content %></div>
+          </div>
+          <div class="usr-control">
+            <%= link_to "修改", edit_blog_path(blog) %>
+            <%= link_to "查看", blog %>
+            <%= link_to "删除", blog_path(blog), :method => :delete, data: {confirm: '你确定要删除吗'} %>
+          </div>
+        </li>
+    <% end %>
+  </ul>
+
+</div>
+<%= link_to "新增", new_blog_path %>
